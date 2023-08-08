@@ -1,11 +1,6 @@
 Project Name : Steganography Techniques
 Made By - Shreyank Saksena
 
-## Project Demo Implementation Video :
-
-https://user-images.githubusercontent.com/77832407/183821992-df55c835-ae41-4cd8-8253-6cbe7881eaf8.mp4
-
-
 * Steganography is the art of hiding the fact that communication is taking place, by hiding information in other information. 
 * This project hides the message with in the image, text file, audio file and video file. In this project, the sender selects a cover file (image, text, audio or video) with secret text and hide it into the cover file by using different efficient algorithm and generate a stego file of same format as our cover file (image, text, audio or video). Then the stego file is sent to the destination with the help of private or public communication networks. On the other side i.e. receiver, the receiver downloads the stego file and by using the appropriate decoding algorithm retrieves the secret text that is hidden in the stego file.
 
@@ -25,9 +20,6 @@ https://user-images.githubusercontent.com/77832407/183821992-df55c835-ae41-4cd8-
 * With the final binary equivalent we also 111111111111 as delimiter to find the end of message 
 * Now from 12 bit representing each character every 2 bit is replaced with equivalent ZWCs according to the table. Each character is hidden after a word in the cover text.
 
-
-# Audio Steganography ( Hiding TEXT in AUDIO ) :
-* For encoding we have modified the LSB Algorithm, for that we take each frame byte of the converting it to 8 bit format then check for the 4th LSB and see if it matches with the secret message bit. If yes change the 2nd LSB to 0 using logical AND operator between each frame byte and 253(11111101). Else we change the 2nd LSB to 1  using logical AND operation with 253 and then logical OR to change it to 1 and now add secret message bit in LSB for achieving that use logical AND operation between each frame byte of carrier audio and a binary number of 254 (11111110). Then logical OR operation between modified carrier byte and the next bit (0 or 1) from the secret message which resets the LSB of carrier byte.
 
 # Video Steganography ( Hiding TEXT in Video ) :
 * In video steganography we have used combination of cryptography and Steganography. We encode the message through two parts
